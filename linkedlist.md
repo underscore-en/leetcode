@@ -1,6 +1,7 @@
 # Get start of second half
 
 ### When the last element is needed
+We want to 
 `s = head, d = aux, while (d && d.next && d.next.next)`
 ```
 ODD    EVEN
