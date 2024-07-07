@@ -1,5 +1,16 @@
-# Topic: Get start of second half
+# Basic Algorithms
+## Reversing a linked list
+```cpp
+ListNode* prev = nullptr;
+ListNode* curr = head;
+while (curr) {
+  ListNode* next = curr->next;
+  curr->next = prev;
+  prev = curr;
+  curr = next;
+}```
 
+## Get start of second half
 ### When the last element is needed
 We want to make sure fast pointer `d` does not go null as we want to derive last element from it.
 `s = head, d = aux, while (d && d.next && d.next.next)`
