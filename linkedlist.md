@@ -1,35 +1,37 @@
 # Get start of second half
-
+### When the last element is not needed and the first half should get the mid element
+`s = head, d = head, while (d)`
 ```text
-while (d)
-* ds  * ds      * d   * d       *  s  *  s
-*  s  *  s      *  s  *  s      * ds  * ds
-* ds  * ds      * ds  * ds      *  s  >  s
->  s  >  s      *  s  *  s      > ds  * d
-* d   * d       > ds  > ds      *     *
-*               *               * d   - d
-- d   - d       - d   - d       
-                                - d
-front           broken          back
-
-while (d && d.next)
-* ds  * ds      * d   * d       *  s  *  s
-*  s  *  s      *  s  *  s      * ds  * ds
-* ds  > ds      * ds  * ds      >  s  >  s
->  s  *         *  s  >  s      * d   * d
-* d   * d       > ds  * d       *     *
-*               *               * d   - d
-- d             - d
-back            broken          broken
-
-while (d && d.next && d.next.next) 
-* ds  * ds      * d   * d       *  s  *  s
-*  s  *  s      *  s  *  s      * ds  > ds
-> ds  > ds      * ds  * ds      >  s  *  
-*     *         >  s  >  s      * d   * d
-* d   * d       * d   * d       *     *
-*               *               * d   
-broken          front           broken
+ODD     EVEN
+0 d s   0 d s 
+1   s   1   s
+2 d s   2 d s
+3   s   3
+4 d     N d
+N d
+```
+### When the last element is not needed and the second half should get the mid element
+`s = head, d = head.next, while (d)`
+```
+ODD     EVEN
+0   s   0 d s 
+1 d s   1   s
+2   s   2 d s
+3 d     3
+4       N d
+N d
+```
+### When the last element is needed
+`s = head, d = aux, while (d && d.next && d.next.next)`
+```
+ODD    EVEN
+A d    A d
+0   s  0   s
+1 d s  1 d s
+2   s  2   s
+3 d    3 d
+4
+If first half should get mid node, do (if d.next: s = s.next) 
 ```
 
 # 1669. Merge In Between Linked Lists
