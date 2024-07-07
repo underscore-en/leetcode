@@ -8,7 +8,8 @@ while (curr) {
   curr->next = prev;
   prev = curr;
   curr = next;
-}```
+}
+```
 
 ## Get start of second half
 ### When the last element is needed
