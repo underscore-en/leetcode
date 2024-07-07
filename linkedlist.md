@@ -1,7 +1,7 @@
 # Get start of second half
 
 ### When the last element is needed
-We want to 
+We want to make sure fast pointer `d` does not go null as we want to derive last element from it.
 `s = head, d = aux, while (d && d.next && d.next.next)`
 ```
 ODD    EVEN
