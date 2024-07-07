@@ -24,7 +24,7 @@ back            broken          broken
 
 while (d && d.next && d.next.next) 
 * ds  * ds      * d   * d       *  s  *  s
-*  s  *  s      *  s  *  s      * ds  - ds
+*  s  *  s      *  s  *  s      * ds  > ds
 > ds  > ds      * ds  * ds      >  s  *  
 *     *         >  s  >  s      * d   * d
 * d   * d       * d   * d       *     *
