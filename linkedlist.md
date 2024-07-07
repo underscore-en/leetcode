@@ -10,6 +10,7 @@ while (curr) {
   curr = next;
 }
 ```
+`prev` will hold the head
 
 ## Get start of second half
 ### When the last element is needed
