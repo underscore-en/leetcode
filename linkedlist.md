@@ -1,4 +1,4 @@
-# Get start of second half
+# Topic: Get start of second half
 
 ### When the last element is needed
 We want to make sure fast pointer `d` does not go null as we want to derive last element from it.
