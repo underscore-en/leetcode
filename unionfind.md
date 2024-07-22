@@ -3,13 +3,13 @@
 #include <vector>
 using namespace std;
 struct Foo {
-    Foo(int n) : parents(vector<int>(n)), size(vector<int>(n, 0)) {
+    Foo(int n) : parents(vector<int>(n)), rank(vector<int>(n, 0)) {
         for (int i=0; i<n; i++) {
             parents[i] = i;
         }
     }
     vector<int> parents;
-    vector<int> size; // only size of root matters
+    vector<int> rank; // only rank of root matters
     int find(int i) {
       int parent = parents[i];
       if (parent == i) return i;
@@ -21,8 +21,8 @@ struct Foo {
       int p1 = find(i);
       int p2 = find(j);
       if (p1 == p2) return;
-      if (size[p1] >= size[p2]) { // larger one become parent to minimize depth
-        if (size[p1] == size[p2]) size[p1]++;
+      if (rank[p1] >= rank[p2]) { // larger one become parent to minimize depth
+        if (rank[p1] == rank[p2]) rank[p1]++;
         parents[p2] = p1;
       } else {
         parents[p1] = p2;
