@@ -13,7 +13,7 @@ struct Foo {
     int find(int i) {
       int parent = parents[i];
       if (parent == i) return i;
-      parents[i] = find(parent); // point all along the path to root
+      parents[i] = find(parent); // path compression
       return parents[i];
     }
     
@@ -38,3 +38,4 @@ int main() {
     return 0;
 }
 ```
+With path compression the algorithm takes O(mα(n)) ~ O(4m); m operation, n elements.
