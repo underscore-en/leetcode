@@ -3,18 +3,18 @@
 #include <vector>
 using namespace std;
 struct Foo {
-    Foo(int n) : parents(vector<int>(n)), rank(vector<int>(n, 0)) {
+    Foo(int n) : id(vector<int>(n)), rank(vector<int>(n, 0)) {
         for (int i=0; i<n; i++) {
-            parents[i] = i;
+            id[i] = i;
         }
     }
-    vector<int> parents;
+    vector<int> id;
     vector<int> rank; // only rank of root matters
     int find(int i) {
-      int parent = parents[i];
+      int parent = id[i];
       if (parent == i) return i;
-      parents[i] = find(parent); // path compression
-      return parents[i];
+      id[i] = find(parent); // path compression
+      return id[i];
     }
     
     void unify(int i, int j) {
@@ -23,9 +23,9 @@ struct Foo {
       if (p1 == p2) return;
       if (rank[p1] >= rank[p2]) { // larger one become parent to minimize depth
         if (rank[p1] == rank[p2]) rank[p1]++;
-        parents[p2] = p1;
+        id[p2] = p1;
       } else {
-        parents[p1] = p2;
+        id[p1] = p2;
       }
     }
 };
