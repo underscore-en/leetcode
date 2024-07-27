@@ -1,6 +1,6 @@
 # leetcode
 Shit I'm bored.
 
-# alt niche map
+# alt algo stack
 ## Topological Sort
 802
