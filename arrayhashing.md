@@ -1,7 +1,9 @@
 # Problems
 
 ## 49. Group Anagrams
+
 Use counting sort on string for computing the key.
+
 ```cpp
 class Solution {
 public:
@@ -40,7 +42,9 @@ public:
     }
 };
 ```
+
 Time Complexity `O(NMlgM)`, `M=length`
+
 Space Complexity `O(MN)`
 
 ## 624. Maximum Distance in Arrays
