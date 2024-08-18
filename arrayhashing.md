@@ -43,9 +43,9 @@ public:
 };
 ```
 
-Time Complexity `O(NMlgM)`, `M=length`
+Time Complexity `O(NMlgM), M= MAX(strlen)`
 
-Space Complexity `O(MN)`
+Space Complexity `O(NM)`
 
 ## 624. Maximum Distance in Arrays
 Distance in either MAX-MIN, MAX-min, max-MIN.
